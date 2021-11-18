@@ -21,12 +21,11 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     for(let i=0;i<myArray.length;i++)
     {
-        if (myArray[ev.target.value]!=match[i]) {
+       
              ev.target.classList.toggle('checked');
              match.push(myArray[ev.target.value]);
              localStorage.setItem("match", JSON.stringify(match) );
              dele(ev.target.value);
-        }
    }
 }, false);
 
